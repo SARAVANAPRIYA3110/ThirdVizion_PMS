@@ -2,7 +2,7 @@ import React from 'react'
 
 const Admin = () => {
   return (
-    <div>
+    <div className='bg-white text-orange-500'>
       <h1>Admin Dahboard</h1>
     </div>
   )
