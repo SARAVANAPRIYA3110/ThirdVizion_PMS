@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Admin from './Admin';
+import Login from './Login';
 
 
 // import reactLogo from './assets/react.svg'
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<h1>Hello World</h1>} />
         <Route path="/admin" element={<Admin />} />
+        <Route path='/login' element={<Login />} />
       
       </Routes>
     </BrowserRouter>
