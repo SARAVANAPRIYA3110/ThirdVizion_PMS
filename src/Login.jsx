@@ -1,5 +1,7 @@
 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
   const [activeTab, setActiveTab] = useState("admin"); 
@@ -8,6 +10,7 @@ const Login = () => {
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleAdminLogin = (e) => {
     e.preventDefault();
@@ -20,6 +23,7 @@ const Login = () => {
 
     if (adminEmail === "admin@example.com" && adminPassword === "admin123") {
       alert(" Admin login successful!");
+      navigate("/admin")
     } else {
       setError("Invalid admin credentials.");
     }
@@ -36,6 +40,7 @@ const Login = () => {
 
     if (userEmail === "user@example.com" && userPassword === "user123") {
       alert(" User login successful!");
+      navigate("/user")
     } else {
       setError("Invalid user credentials.");
     }
